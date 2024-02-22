@@ -1,4 +1,4 @@
-package com.group.libarayapp.dto.task.request;
+package com.group.libarayapp.dto.task02.request;
 
 import java.time.LocalDate;
 
