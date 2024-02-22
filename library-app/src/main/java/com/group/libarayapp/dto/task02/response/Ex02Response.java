@@ -1,6 +1,6 @@
-package com.group.libarayapp.dto.task.response;
+package com.group.libarayapp.dto.task02.response;
 
-import com.group.libarayapp.dto.task.request.Ex02Request;
+import com.group.libarayapp.dto.task02.request.Ex02Request;
 
 import java.time.format.TextStyle;
 import java.util.Locale;

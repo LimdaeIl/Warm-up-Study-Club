@@ -1,4 +1,4 @@
-package com.group.libarayapp.dto.task.response;
+package com.group.libarayapp.dto.task02.response;
 
 import java.util.List;
 

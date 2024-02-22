@@ -1,6 +1,6 @@
-package com.group.libarayapp.dto.task.response;
+package com.group.libarayapp.dto.task02.response;
 
-import com.group.libarayapp.dto.task.request.Ex01Request;
+import com.group.libarayapp.dto.task02.request.Ex01Request;
 
 public class Ex01Response {
 

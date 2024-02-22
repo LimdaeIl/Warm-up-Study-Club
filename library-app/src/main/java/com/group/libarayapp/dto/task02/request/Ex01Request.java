@@ -1,4 +1,4 @@
-package com.group.libarayapp.dto.task.request;
+package com.group.libarayapp.dto.task02.request;
 
 public class Ex01Request {
     private final int num1;

@@ -1,7 +1,7 @@
-package com.group.libarayapp.controller.task;
+package com.group.libarayapp.controller.task02;
 
-import com.group.libarayapp.dto.task.request.Ex01Request;
-import com.group.libarayapp.dto.task.response.Ex01Response;
+import com.group.libarayapp.dto.task02.request.Ex01Request;
+import com.group.libarayapp.dto.task02.response.Ex01Response;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
