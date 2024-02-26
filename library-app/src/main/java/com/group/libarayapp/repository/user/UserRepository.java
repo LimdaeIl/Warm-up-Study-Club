@@ -10,6 +10,7 @@ import java.util.List;
 public class UserRepository {
     private final JdbcTemplate jdbcTemplate;
 
+    // JdbcTemplate 을 생성자에 작성하여 스프링 컨테이너가 넣어준다. : 생성자를 이용해 주입받는 방법 (권장)
     public UserRepository(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
