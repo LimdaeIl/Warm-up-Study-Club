@@ -5,15 +5,17 @@ import com.group.libarayapp.dto.user.request.UserUpdateRequest;
 import com.group.libarayapp.dto.user.response.UserResponse;
 import com.group.libarayapp.repository.user.UserRepository;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class UserService {
 
     private final UserRepository userRepository;
 
-    public UserService(JdbcTemplate jdbcTemplate) {
-        this.userRepository = new UserRepository(jdbcTemplate);
+    public UserService(UserRepository userRepository) {
+        this.userRepository = userRepository;
     }
 
     public void updateUser(UserUpdateRequest request) {

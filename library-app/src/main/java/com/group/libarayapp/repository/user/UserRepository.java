@@ -2,9 +2,11 @@ package com.group.libarayapp.repository.user;
 
 import com.group.libarayapp.dto.user.response.UserResponse;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public class UserRepository {
     private final JdbcTemplate jdbcTemplate;
 
