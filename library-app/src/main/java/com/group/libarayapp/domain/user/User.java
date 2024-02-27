@@ -1,9 +1,19 @@
 package com.group.libarayapp.domain.user;
 
+import jakarta.persistence.*;
+
+@Entity
 public class User {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id = null; // bigint
+
+    @Column(nullable = false, length = 20) // name varchar(20)
     private String name;
     private Integer age;
+
+    protected User() {}
 
     public User(String name, Integer age) {
         if (name == null || name.isBlank()) {
@@ -19,5 +29,13 @@ public class User {
 
     public Integer getAge() {
         return age;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void updateName(String name) {
+        this.name = name;
     }
 }
