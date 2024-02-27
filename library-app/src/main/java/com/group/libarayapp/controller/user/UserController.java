@@ -3,12 +3,7 @@ package com.group.libarayapp.controller.user;
 import com.group.libarayapp.dto.user.request.UserCreateRequest;
 import com.group.libarayapp.dto.user.request.UserUpdateRequest;
 import com.group.libarayapp.dto.user.response.UserResponse;
-import com.group.libarayapp.service.fruit.AppleService;
-import com.group.libarayapp.service.fruit.FruitService;
-import com.group.libarayapp.service.user.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.jdbc.core.JdbcTemplate;
+import com.group.libarayapp.service.user.UserServiceV2;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,13 +11,10 @@ import java.util.List;
 @RestController
 public class UserController {
 
-    private final UserService userService;
-    private final FruitService fruitService;
+    private final UserServiceV2 userService;
 
-
-    public UserController(UserService userService, @Qualifier("appleService") FruitService fruitService) {
+    public UserController(UserServiceV2 userService) {
         this.userService = userService;
-        this.fruitService = fruitService;
     }
 
 
@@ -43,5 +35,6 @@ public class UserController {
 
     @DeleteMapping("/user")
     public void deleteUser(@RequestParam String name) {
+        userService.deleteUser(name);
     }
 }
